@@ -1,19 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    <header>
+        <nav></nav>
+    </header>
+
     <section>
-        <form action="" method="post">
-            
+        <!--As validações é chamado pelo id validate-form e por cada name as indicações dos script são acionadas-->
+        <form name="validate-form" id="validate-form" method="post">
+
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+
+            <label for="cidade">Cidade</label>
+            <select name="cidade" id="cidade">
+                <option value="">------</option>
+                <option value="r">Riacho da cruz</option>
+                <option value="v">Viçosa</option>
+            </select>
+
+            <label for="instragram">instragram</label>
+            <input type="text" name="instagram" id="instagram">
+
+            <label for="numero">Numero</label>
+            <input type="text" name="numero" id="numero">
+
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf">
+
+            <input type="submit" name="enviar" value="enviar">
         </form>
     </section>
+    <aside></aside>
+
     <footer>
+        <!--Biblioteca jquery-->
         <script src="/library/jquery-3.4.1.min.js"></script>
+        <!--Biblioteca de validação-->
         <script src="/library/jquery.validate.min.js"></script>
+        <!--Mensagens da biblioteca em português-->
+        <script src="/library/localization/messages_pt_BR.js"></script>
+        <!--Métodos adicionais da biblioteca-->
+        <script src="/library/additional-methods.min.js"></script>
+        
+        <!--chamada do script de validação-->
+        <script src="/js/script.js"></script>
     </footer>
 </body>
 </html>
